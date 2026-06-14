@@ -1,0 +1,52 @@
+aid: flotiq
+name: Flotiq
+description: "Open-source headless CMS with auto-generated GraphQL and REST APIs from content type definitions, hosting both self-managed and cloud deployments."
+type: Index
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://flotiq.com/
+baseURL: https://api.flotiq.com/api/v2/graphql
+created: 2026-06-14
+modified: 2026-06-14
+specificationVersion: '0.19'
+tags:
+  - GraphQL
+  - Headless CMS
+  - Content Management
+  - REST
+  - API-First
+apis:
+  - aid: flotiq:api
+    name: Flotiq API
+    description: "Auto-generated RESTful and GraphQL APIs derived from user-defined content type definitions, enabling full CRUD operations on content objects with OpenAPI schema support."
+    tags:
+      - GraphQL
+      - REST
+      - Content Management
+      - OpenAPI
+    humanURL: https://flotiq.com/docs/API/
+    baseURL: https://api.flotiq.com/api/v1/
+    properties:
+      - url: https://flotiq.com/docs/API/
+        type: Documentation
+      - url: graphql/flotiq-graphql.md
+        type: GraphQL
+common:
+  - url: https://flotiq.com/
+    type: Website
+  - url: https://flotiq.com/docs/
+    type: Documentation
+  - url: https://www.linkedin.com/company/flotiq
+    type: LinkedIn
+  - url: https://github.com/flotiq
+    type: GitHubOrganization
+  - url: https://flotiq.com/pricing/
+    type: Pricing
+  - url: plans/flotiq-plans.md
+    type: Plans
+  - url: rate-limits/flotiq-rate-limits.md
+    type: RateLimits
+  - url: finops/flotiq-finops.md
+    type: FinOps
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
