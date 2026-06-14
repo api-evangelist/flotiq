@@ -1,0 +1,264 @@
+"""
+Flotiq GraphQL Schema
+Source: https://flotiq.com/docs/API/graph-ql/
+Endpoint (query):  POST https://api.flotiq.com/api/v2/graphql
+Endpoint (schema): GET  https://api.flotiq.com/api/v2/graphql/schema
+
+Authentication: X-AUTH-TOKEN header or auth_token query parameter.
+Application API Keys only — User Defined (scoped) keys are not accepted.
+
+NOTE: The schema shown below reflects the built-in system types and the
+demo content types (category, product) documented in the official Flotiq
+API reference. Each Flotiq account produces a unique schema derived from
+its Content Type Definitions; the structure of each user-defined type
+follows the same connection / edge / pageInfo pattern shown here.
+"""
+
+# ---------------------------------------------------------------------------
+# Shared filter input
+# ---------------------------------------------------------------------------
+
+"""Filter input for individual field conditions"""
+input FlotiqFieldFilterInput {
+  type: String!
+  filter: String!
+}
+
+# ---------------------------------------------------------------------------
+# Root Query type
+# ---------------------------------------------------------------------------
+
+type Query {
+  _media(
+    id: String
+    field: String
+    value: String
+    first: Int
+    offset: Int
+    order_by: String
+    order_direction: String
+    filter: _mediaFilterInput
+  ): _mediaConnection
+
+  _tag(
+    id: String
+    field: String
+    value: String
+    first: Int
+    offset: Int
+    order_by: String
+    order_direction: String
+    filter: _tagFilterInput
+  ): _tagConnection
+
+  category(
+    id: String
+    field: String
+    value: String
+    first: Int
+    offset: Int
+    order_by: String
+    order_direction: String
+    filter: categoryFilterInput
+  ): categoryConnection
+
+  product(
+    id: String
+    field: String
+    value: String
+    first: Int
+    offset: Int
+    order_by: String
+    order_direction: String
+    filter: productFilterInput
+  ): productConnection
+}
+
+# ---------------------------------------------------------------------------
+# Built-in internal metadata type
+# ---------------------------------------------------------------------------
+
+"""Default internal type — present on every Flotiq content object"""
+type flotiq___internal {
+  status: String
+  createdAt: String
+  deletedAt: String
+  updatedAt: String
+  contentType: String
+  objectTitle: String
+  latestVersion: Int
+}
+
+# ---------------------------------------------------------------------------
+# _media — built-in media / file type
+# ---------------------------------------------------------------------------
+
+"""Auto generated Headless CMS type: _media"""
+type _media {
+  internal: flotiq___internal
+  id: String!
+  alt: String
+  url: String!
+  size: Float!
+  tags: [_tag]
+  type: String!
+  title: String
+  width: Float
+  height: Float
+  source: String!
+  fileName: String
+  mimeType: String!
+  variants: [_media_variants]
+  extension: String!
+  externalId: String
+}
+
+type _mediaConnection {
+  edges: [_mediaEdge]
+  pageInfo: _mediaPageInfo
+  totalCount: Int
+}
+
+type _mediaEdge {
+  node: _media
+}
+
+type _mediaPageInfo {
+  hasNextPage: Boolean
+}
+
+type _media_variants {
+  name: String
+  trim: [_media_variants_trim]
+}
+
+type _media_variants_trim {
+  top: Float
+  left: Float!
+  right: Float
+  width: Float
+  bottom: Float
+  height: Float
+}
+
+"""Filter container for fields in _media"""
+input _mediaFilterInput {
+  alt: FlotiqFieldFilterInput
+  url: FlotiqFieldFilterInput
+  size: FlotiqFieldFilterInput
+  tags: FlotiqFieldFilterInput
+  type: FlotiqFieldFilterInput
+  title: FlotiqFieldFilterInput
+  width: FlotiqFieldFilterInput
+  height: FlotiqFieldFilterInput
+  source: FlotiqFieldFilterInput
+  fileName: FlotiqFieldFilterInput
+  mimeType: FlotiqFieldFilterInput
+  variants: FlotiqFieldFilterInput
+  extension: FlotiqFieldFilterInput
+  externalId: FlotiqFieldFilterInput
+}
+
+# ---------------------------------------------------------------------------
+# _tag — built-in tag type
+# ---------------------------------------------------------------------------
+
+"""Auto generated Headless CMS type: _tag"""
+type _tag {
+  internal: flotiq___internal
+  id: String!
+  name: String
+}
+
+type _tagConnection {
+  edges: [_tagEdge]
+  pageInfo: _tagPageInfo
+  totalCount: Int
+}
+
+type _tagEdge {
+  node: _tag
+}
+
+type _tagPageInfo {
+  hasNextPage: Boolean
+}
+
+"""Filter container for fields in _tag"""
+input _tagFilterInput {
+  name: FlotiqFieldFilterInput
+}
+
+# ---------------------------------------------------------------------------
+# category — demo content type
+# ---------------------------------------------------------------------------
+
+"""Auto generated Headless CMS type: category"""
+type category {
+  internal: flotiq___internal
+  id: String!
+  name: String
+  description: String
+}
+
+type categoryConnection {
+  edges: [categoryEdge]
+  pageInfo: categoryPageInfo
+  totalCount: Int
+}
+
+type categoryEdge {
+  node: category
+}
+
+type categoryPageInfo {
+  hasNextPage: Boolean
+}
+
+"""Filter container for fields in category"""
+input categoryFilterInput {
+  name: FlotiqFieldFilterInput
+  description: FlotiqFieldFilterInput
+}
+
+# ---------------------------------------------------------------------------
+# product — demo content type (has relations to category and _media)
+# ---------------------------------------------------------------------------
+
+"""Auto generated Headless CMS type: product"""
+type product {
+  internal: flotiq___internal
+  id: String!
+  name: String
+  slug: String
+  price: Float
+  categories: [category]
+  description: String
+  productimage: [_media]
+  productgallery: [_media]
+}
+
+type productConnection {
+  edges: [productEdge]
+  pageInfo: productPageInfo
+  totalCount: Int
+}
+
+type productEdge {
+  node: product
+}
+
+type productPageInfo {
+  hasNextPage: Boolean
+}
+
+"""Filter container for fields in product"""
+input productFilterInput {
+  name: FlotiqFieldFilterInput
+  slug: FlotiqFieldFilterInput
+  price: FlotiqFieldFilterInput
+  categories: FlotiqFieldFilterInput
+  description: FlotiqFieldFilterInput
+  productimage: FlotiqFieldFilterInput
+  productgallery: FlotiqFieldFilterInput
+}
