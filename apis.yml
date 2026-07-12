@@ -31,6 +31,8 @@ apis:
       - url: graphql/flotiq-graphql.md
         type: GraphQL
 common:
+  - type: DomainSecurity
+    url: security/flotiq-domain-security.yml
   - url: https://flotiq.com/
     type: Website
   - url: https://flotiq.com/docs/
@@ -47,6 +49,8 @@ common:
     type: RateLimits
   - url: finops/flotiq-finops.md
     type: FinOps
+  - url: https://flotiq.com/blog/
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
