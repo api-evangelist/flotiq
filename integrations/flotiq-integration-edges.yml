@@ -5,24 +5,6 @@ checked:
 - https://zapier.com/api/v4/apps/
 marketplace_apps: []
 edges:
-- partner_name: GitHub Marketplace (apps)
-  partner: github
-  partner_match: aggregator
-  type: marketplace
-  marketplace: github-apps
-  channel: partner-built
-  relationship: platform-app
-  direction: third-party
-  evidence: https://github.com/marketplace/flotiq-aws-staging
-  listing_count: 1
-  apps:
-  - Flotiq - headless API-first CMS
-  publisher_name: Flotiq
-  badges:
-  - Verified creator
-  - Verified domain
-  detected_by: sweep-devtools.py
-  detected: '2026-10-14'
 - partner_name: Zapier
   partner: zapier
   partner_match: aggregator
