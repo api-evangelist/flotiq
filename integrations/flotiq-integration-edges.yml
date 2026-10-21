@@ -3,6 +3,7 @@ method: searched
 checked:
 - https://github.com/marketplace?type=apps
 - https://zapier.com/api/v4/apps/
+- github/integrations/github-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: Zapier
@@ -30,5 +31,27 @@ edges:
     builder: unknown (not in the directory record)
   detected_by: sweep-workflow-automation.py
   first_seen: '2026-10-15'
+- partner_name: GitHub (own)
+  partner: github
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://github.com/marketplace/flotiq-aws-staging
+  mirror_of: github/integrations/github-integration-edges.yml
+  apps:
+  - Flotiq - headless API-first CMS
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  badges:
+  - Verified publisher
+  - Verified domain
+  publisher_verified:
+  - Verified publisher
+  - Verified domain
 source:
 - https://github.com/marketplace?type=apps
