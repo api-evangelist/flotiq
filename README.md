@@ -64,48 +64,101 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Flotiq is an API-first headless CMS that auto-generates RESTful and GraphQL APIs from user-defined content type definitions. It supports both cloud-hosted and self-managed deployments.
+Open-source headless CMS with auto-generated GraphQL and REST APIs from content type definitions, hosting both self-managed and cloud deployments.
 
-## Overview
+**Areas:** GraphQL · Headless CMS · Content Management · REST · API-First
 
-- **Website**: https://flotiq.com/
-- **Documentation**: https://flotiq.com/docs/
-- **API Base URL**: https://api.flotiq.com/api/v1/
-- **GraphQL Endpoint**: https://api.flotiq.com/api/v2/graphql
-- **GitHub Organization**: https://github.com/flotiq
-- **LinkedIn**: https://www.linkedin.com/company/flotiq
-- **Pricing**: https://flotiq.com/pricing/
+## Flotiq on APIs.io
 
-## Key Features
+Everything profiled for Flotiq is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/flotiq/](https://apis.io/providers/flotiq/)** — or go straight to one of the APIs or properties below.
 
-- Auto-generated RESTful and GraphQL APIs from content type definitions
-- Dynamic OpenAPI schema that updates with every content type change
-- Full-text search engine built in
-- SDK generation (JavaScript/TypeScript and custom)
-- CLI tools for data migration and project setup
-- Integrations with Gatsby, Next.js, Netlify, Vercel, and more
-- Webhooks for event-driven workflows
-- Scoped API keys for fine-grained access control
+### APIs (1)
 
-## Plans
+- [Flotiq API](https://apis.io/apis/flotiq/api/) — Auto-generated RESTful and GraphQL APIs derived from user-defined content type definitions, enabling full CRUD operations on content objects with OpenAPI…
 
-| Plan   | Price        | API Calls/Month | Content Objects |
-|--------|-------------|-----------------|-----------------|
-| Free   | $0          | 100,000         | 1,000           |
-| Basic  | $37/month   | 300,000         | 10,000          |
-| Growth | $114/month  | 1,000,000       | 100,000         |
-| Custom | Contact sales | Custom         | Custom          |
+### Published properties
 
-See [plans/flotiq-plans.md](plans/flotiq-plans.md) for full plan details.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Repository Contents
+#### GraphQL (1)
 
-- `apis.yml` — API catalog index (apis.io format)
-- `plans/flotiq-plans.md` — Detailed plan and pricing breakdown
-- `rate-limits/flotiq-rate-limits.md` — Rate limiting policies and quotas
-- `finops/flotiq-finops.md` — Cost management and optimization guidance
-- `graphql/flotiq-graphql.md` — GraphQL API reference
+GraphQL schemas.
 
-## Maintainer
+- [Flotiq GraphQL](https://apis.io/graphqls/flotiq/flotiq-graphql/)
 
-Kin Lane — kin@apievangelist.com
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [flotiq](https://apis.io/servers/flotiq/flotiq/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Flotiq Domain Security](https://apis.io/security/flotiq/flotiq-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://flotiq.com/)
+- [Documentation](https://flotiq.com/docs/)
+- [Pricing](https://flotiq.com/pricing/)
+- [Blog](https://flotiq.com/blog/)
+- [GitHub](https://github.com/flotiq)
+
+## API Evangelist rating
+
+**Kin Score 19.2** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.7 |
+| Contract quality | 35.1 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 10.5 |
+
+**Agent readiness 27.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/flotiq/](https://apis.io/providers/flotiq/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Flotiq: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/flotiq/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
